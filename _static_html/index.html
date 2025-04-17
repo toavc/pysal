@@ -1,0 +1,409 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PySAL Documentation Hub</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <span class="slider round"></span>
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <!-- Project Logo or Title -->
+        <div class="sidebar-header">
+            <img src="https://pysal.org/pysal/_static/pysal_logo.png" alt="PySAL Logo" class="logo">
+            <h2>PySAL Docs</h2>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Search documentation...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <ul class="sidebar-nav">
+            <!-- Navigation links with icons -->
+            <li><a class="active" href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-rocket"></i> Getting Started</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-puzzle-piece"></i> Components <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Lib</a></li>
+                    <li><a href="#">Viz</a></li>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">Model</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-book"></i> API Reference</a></li>
+            <li><a href="#"><i class="fas fa-graduation-cap"></i> Tutorials</a></li>
+            <li><a href="#"><i class="fas fa-link"></i> Resources</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <a href="https://github.com/pysal/pysal" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/pysal_devs" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://pypi.org/project/pysal/" target="_blank"><i class="fab fa-python"></i></a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <header>
+            <h1>Welcome to the PySAL Documentation Hub!</h1>
+            <p class="version-badge">Current Version: <span>2.8.0</span></p>
+        </header>
+
+        <!-- Tab navigation -->
+        <div class="tab-container">
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="installation">Installation</button>
+                <button class="tab-btn" data-tab="examples">Examples</button>
+                <button class="tab-btn" data-tab="resources">Resources</button>
+            </div>
+
+            <!-- Tab content -->
+            <div class="tab-content">
+                <!-- Overview Tab -->
+                <div class="tab-pane active" id="overview">
+                    <section class="card">
+                        <h2>What is PySAL?</h2>
+                        <p>
+                            PySAL (Python Spatial Analysis Library) is an open-source cross-platform library for geospatial data science with an emphasis on geospatial vector data written in Python. It supports the development of high-level applications for spatial analysis, including detection of spatial clusters and hot-spots, construction of graphs from spatial data, spatial regression, spatial econometrics, and exploratory spatio-temporal data analysis.
+                        </p>
+                        <p>
+                            As of version 2.0.0, PySAL is now a collection of affiliated geographic data science packages, focusing exclusively on Python 3 support.
+                        </p>
+                    </section>
+
+                    <section class="card">
+                        <h2>PySAL Components</h2>
+                        <div class="component-grid">
+                            <div class="component-card">
+                                <div class="component-icon"><i class="fas fa-cubes"></i></div>
+                                <h3>Lib</h3>
+                                <p>Foundational algorithms and data structures including I/O operations, spatial weights matrices, computational geometry, and example datasets.</p>
+                                <ul>
+                                    <li><strong>libpysal</strong>: Core functionality</li>
+                                    <li><strong>tobler</strong>: Areal interpolation and dasymetric mapping</li>
+                                    <li><strong>access</strong>: Spatial accessibility calculations</li>
+                                    <li><strong>spopt</strong>: Spatial optimization methods</li>
+                                </ul>
+                            </div>
+                            <div class="component-card">
+                                <div class="component-icon"><i class="fas fa-chart-pie"></i></div>
+                                <h3>Viz</h3>
+                                <p>Visualization tools for geospatial data, including maps and statistical plots.</p>
+                                <ul>
+                                    <li><strong>legendgram</strong>: Visualizations for distribution of observations</li>
+                                    <li><strong>mapclassify</strong>: Classification schemes for choropleth mapping</li>
+                                    <li><strong>splot</strong>: Statistical visualizations for spatial analysis</li>
+                                </ul>
+                            </div>
+                            <div class="component-card">
+                                <div class="component-icon"><i class="fas fa-search"></i></div>
+                                <h3>Explore</h3>
+                                <p>Modules for exploratory analysis of spatial and spatio-temporal data, including statistical testing.</p>
+                                <ul>
+                                    <li><strong>esda</strong>: Exploratory Spatial Data Analysis</li>
+                                    <li><strong>pointpats</strong>: Statistical analysis of point patterns</li>
+                                    <li><strong>inequality</strong>: Spatial inequality analytics</li>
+                                </ul>
+                            </div>
+                            <div class="component-card">
+                                <div class="component-icon"><i class="fas fa-brain"></i></div>
+                                <h3>Model</h3>
+                                <p>Tools for modeling spatial relationships in data with various statistical frameworks.</p>
+                                <ul>
+                                    <li><strong>spreg</strong>: Spatial regression models</li>
+                                    <li><strong>spint</strong>: Spatial interaction modeling</li>
+                                    <li><strong>mgwr</strong>: Multiscale geographically weighted regression</li>
+                                    <li><strong>spglm</strong>: Spatial generalized linear models</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Installation Tab -->
+                <div class="tab-pane" id="installation">
+                    <section class="card">
+                        <h2>Installation Options</h2>
+                        <p>PySAL can be installed using either conda (recommended) or pip:</p>
+                        
+                        <div class="installation-options">
+                            <div class="install-option">
+                                <h3><i class="fab fa-python"></i> Using conda</h3>
+                                <div class="code-block">
+                                    <pre><code># Install via conda-forge (recommended)
+conda config --add channels conda-forge
+conda install pysal</code></pre>
+                                    <button class="copy-btn" data-code="conda config --add channels conda-forge
+conda install pysal"><i class="fas fa-copy"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="install-option">
+                                <h3><i class="fas fa-box"></i> Using pip</h3>
+                                <div class="code-block">
+                                    <pre><code># Install via pip
+pip install pysal</code></pre>
+                                    <button class="copy-btn" data-code="pip install pysal"><i class="fas fa-copy"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert info">
+                            <i class="fas fa-info-circle"></i>
+                            <p>For the full functionality, you may need to install additional dependencies. Check the official documentation for details.</p>
+                        </div>
+                    </section>
+                    
+                    <section class="card">
+                        <h2>System Requirements</h2>
+                        <ul class="requirements-list">
+                            <li><i class="fas fa-check-circle"></i> Python 3.6 or later</li>
+                            <li><i class="fas fa-check-circle"></i> NumPy (1.15 or later)</li>
+                            <li><i class="fas fa-check-circle"></i> SciPy (1.0 or later)</li>
+                            <li><i class="fas fa-check-circle"></i> Pandas (0.23 or later)</li>
+                            <li><i class="fas fa-check-circle"></i> GeoPandas (0.4 or later) for working with geospatial data</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Examples Tab -->
+                <div class="tab-pane" id="examples">
+                    <section class="card">
+                        <h2>Quick Start Examples</h2>
+                        <p>Here are some examples to get you started with PySAL:</p>
+                        
+                        <div class="example-section">
+                            <h3>Loading Example Data</h3>
+                            <div class="code-block">
+                                <pre><code>import libpysal
+import geopandas as gpd
+
+# Load example dataset
+url = libpysal.examples.get_path('columbus.shp')
+gdf = gpd.read_file(url)
+
+print(gdf.head())</code></pre>
+                                <button class="copy-btn" data-code="import libpysal
+import geopandas as gpd
+
+# Load example dataset
+url = libpysal.examples.get_path('columbus.shp')
+gdf = gpd.read_file(url)
+
+print(gdf.head())"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="example-section">
+                            <h3>Calculating Spatial Weights</h3>
+                            <div class="code-block">
+                                <pre><code>import libpysal
+import geopandas as gpd
+
+# Load data
+url = libpysal.examples.get_path('columbus.shp')
+gdf = gpd.read_file(url)
+
+# Create queen contiguity weights
+weights = libpysal.weights.Queen.from_dataframe(gdf)
+
+# Print summary of weights
+print(weights.summary())</code></pre>
+                                <button class="copy-btn" data-code="import libpysal
+import geopandas as gpd
+
+# Load data
+url = libpysal.examples.get_path('columbus.shp')
+gdf = gpd.read_file(url)
+
+# Create queen contiguity weights
+weights = libpysal.weights.Queen.from_dataframe(gdf)
+
+# Print summary of weights
+print(weights.summary())"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="example-section">
+                            <h3>Exploratory Spatial Data Analysis</h3>
+                            <div class="code-block">
+                                <pre><code>import esda
+import libpysal
+import geopandas as gpd
+
+# Load data
+url = libpysal.examples.get_path('columbus.shp')
+gdf = gpd.read_file(url)
+y = gdf['CRIME']
+
+# Create weights
+w = libpysal.weights.Queen.from_dataframe(gdf)
+w.transform = 'r'
+
+# Calculate Moran's I
+moran = esda.Moran(y, w)
+print(f"Moran's I: {moran.I}")
+print(f"P-value: {moran.p_sim}")</code></pre>
+                                <button class="copy-btn" data-code="import esda
+import libpysal
+import geopandas as gpd
+
+# Load data
+url = libpysal.examples.get_path('columbus.shp')
+gdf = gpd.read_file(url)
+y = gdf['CRIME']
+
+# Create weights
+w = libpysal.weights.Queen.from_dataframe(gdf)
+w.transform = 'r'
+
+# Calculate Moran's I
+moran = esda.Moran(y, w)
+print(f&quot;Moran's I: {moran.I}&quot;)
+print(f&quot;P-value: {moran.p_sim}&quot;)"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Resources Tab -->
+                <div class="tab-pane" id="resources">
+                    <section class="card">
+                        <h2>Official Resources</h2>
+                        <div class="resources-grid">
+                            <a href="https://pysal.org/pysal/" target="_blank" class="resource-card">
+                                <i class="fas fa-globe"></i>
+                                <h3>PySAL Website</h3>
+                                <p>Visit the official website for comprehensive documentation</p>
+                            </a>
+                            <a href="https://github.com/pysal/pysal" target="_blank" class="resource-card">
+                                <i class="fab fa-github"></i>
+                                <h3>GitHub Repository</h3>
+                                <p>Access source code and contribute to development</p>
+                            </a>
+                            <a href="https://pypi.org/project/pysal/" target="_blank" class="resource-card">
+                                <i class="fab fa-python"></i>
+                                <h3>PyPI Package</h3>
+                                <p>View the PyPI page for installation information</p>
+                            </a>
+                            <a href="https://pysal.org/docs/api" target="_blank" class="resource-card">
+                                <i class="fas fa-book-open"></i>
+                                <h3>API Documentation</h3>
+                                <p>Detailed API references for all components</p>
+                            </a>
+                        </div>
+                    </section>
+                    
+                    <section class="card">
+                        <h2>Academic Citation</h2>
+                        <div class="citation-block">
+                            <p>If you use PySAL in academic work, please cite:</p>
+                            <blockquote>
+                                Rey, S.J. and L. Anselin, "PySAL: A Python Library of Spatial Analytical Methods", The Review of Regional Studies 37, 5-27 2007
+                            </blockquote>
+                            <button class="copy-btn citation-btn" data-code="Rey, S.J. and L. Anselin, &quot;PySAL: A Python Library of Spatial Analytical Methods&quot;, The Review of Regional Studies 37, 5-27 2007">
+                                <i class="fas fa-copy"></i> Copy Citation
+                            </button>
+                        </div>
+                    </section>
+                    
+                    <section class="card">
+                        <h2>Community Support</h2>
+                        <div class="community-options">
+                            <a href="https://github.com/pysal/pysal/discussions" class="community-option">
+                                <i class="fas fa-comments"></i>
+                                <h3>GitHub Discussions</h3>
+                                <p>Ask questions and engage with the community</p>
+                            </a>
+                            <a href="https://opengeospatialscience.slack.com/" class="community-option">
+                                <i class="fab fa-slack"></i>
+                                <h3>Slack Channel</h3>
+                                <p>Join the Slack for real-time discussions</p>
+                            </a>
+                            <a href="https://stackoverflow.com/questions/tagged/pysal" class="community-option">
+                                <i class="fab fa-stack-overflow"></i>
+                                <h3>Stack Overflow</h3>
+                                <p>Find solutions tagged with #pysal</p>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>PySAL Documentation Hub © 2025 | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+            <p>Licensed under the BSD License. The Python Spatial Analysis Library is an open-source project.</p>
+        </footer>
+    </main>
+    
+    <script>
+        // Toggle sidebar
+        document.querySelector('.sidebar-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('sidebar-collapsed');
+        });
+        
+        // Dark/Light mode toggle
+        document.querySelector('.theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+        
+        // Tab switching
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons and panes
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding pane
+                this.classList.add('active');
+                document.getElementById(this.dataset.tab).classList.add('active');
+            });
+        });
+        
+        // Dropdown menu in sidebar
+        document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
+            e.preventDefault();
+            this.parentElement.classList.toggle('open');
+        });
+        
+        // Copy to clipboard functionality
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const code = this.dataset.code;
+                navigator.clipboard.writeText(code).then(() => {
+                    // Change button icon temporarily
+                    const originalHtml = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(() => {
+                        this.innerHTML = originalHtml;
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
